@@ -1,27 +1,59 @@
-var num =10;
+// var num =10;
 
-console.log(num);
+// console.log(num);
 
-console.log(typeof(num));
+// console.log(typeof(num));
 
-num = false;
+// num = false;
 
-console.log(num);
+// console.log(num);
 
-console.log(typeof(num));
+// console.log(typeof(num));
 
-num = null;
+// num = null;
 
 
-const sym1 = symbol(4);
-console.log(sym1);
+// const sym1 = Symbol(5);
 
-const sym2 = symbol(4);
-console.log(sym2);
-if(sym1==sym2){
-    console.log(true);
-}
-else{ 
-    console.log(false);
-}
+// console.log(sym1);
+
+// const sym2 = Symbol(5);
+// console.log(sym2);
+
+// if(sym1 == sym2){
+//     console.log("true");
+// }
+// else{
+//     console.log("false")
+// }
+
+
+var =10;
+var = 20;
+var linebreak = "<br/>";
+
+document.write("(a==b)=>");
+
+result =(a==b);
+
+document.write(result);
+
+document.write(linebreak);
+
+document.write("(a<b)=>");
+
+result = (a<b);
+document.write(result);
+document.write(linebreak);
+
+document.write("(a>b)=>");
+
+result = (a>b);
+
+document.write(result);
+document.write(linebreak);
+
+
+
+
 
