@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body><script  src="first.js"></script></body>
+<body onload="myFunction()">
+    
+    <script src="second2.js">
 
+        var text = '{"employees":['+
+        '{"firstName":"John","lastName":"Doe"},'+
+        '{"firstName":"Anna","lastName":"Smith"},'+
+        '{"firstName":"Peter","lastName":"Jones"}]}';
+
+        obj = JSON.parse(text);
+        document.getElementById("demo").innerHTML=text
+        obj.employees[1].first
+    
+
+    </script>
+</body>
 </html>
