@@ -1,50 +1,60 @@
-*{
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
-}
-h1{
-    font-size: medium;
-     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 5px;
-    margin-bottom: 5px;
+body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f9;
+      margin: 0;
+      padding: 20px;
+    }
 
-    
-}
-body{
-     background-color: white;
-    /* background: #020024; */
-/* background: linear-gradient(170deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 0%, rgba(6, 76, 166, 1) 22%, rgba(3, 144, 210, 1) 40%, rgba(0, 212, 255, 1) 68%, rgba(8, 42, 142, 1) 96%); */
-    /* text-align: center; */
-     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.container{
-    justify-content: space-around;
-    height: 300px;
-    width: 300px;
-     border: 1px solid black;
-     margin-top: 5px;
-    background-color: rgb(188, 211, 211);
+    h1 {
+      text-align: center;
+      color: #333;
+    }
 
-    
-}
-    
-input{
-    background-color: rgb(251, 247, 247);
-    margin: 3px;
-    
-}
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
 
-.btn1{
-    margin: 3px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: rgb(27, 221, 31);
+    input {
+      padding: 10px;
+      margin: 5px;
+      width: 18%;
+    }
 
+    button {
+      padding: 10px 15px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
 
-}
+    button:hover {
+      background: #0056b3;
+    }
+
+    table {
+      width: 100%;
+      margin-top: 20px;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: center;
+    }
+
+    th {
+      background: #007bff;
+      color: white;
+    }
+
+    .delete-btn {
+      background: red;
+    }

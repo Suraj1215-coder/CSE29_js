@@ -1,27 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Employee Salary Management System</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1><u>Salary Management System</u></h1>
-        <input type="text" id="name" placeholder="Enter the name">
-        <input type="text" id="id" placeholder="Enter the id">
-        <input type="number" id="salary" placeholder="Enter the salary">
-        <input type="text" id="dept" placeholder="Enter the department">
-        <button class="btn1">salary</button>
-        
-        <button class="btn1">add emp </button>
-        <button class="btn1">salary>5000</button>
-        <button class="btn1">all emp</button>
-        <button class="btn1">count</button>
-        <!-- <button id="btn1"></button> -->
-         
-    </div>
-    <script src="script.js"></script>
+
+<h1>Employee Salary Management System</h1>
+
+<div class="container">
+  <input type="text" id="name" placeholder="Name">
+  <input type="number" id="basic" placeholder="Basic Salary">
+  <input type="number" id="hra" placeholder="HRA">
+  <input type="number" id="da" placeholder="DA">
+  <button onclick="addEmployee()">Add</button>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Basic</th>
+        <th>HRA</th>
+        <th>DA</th>
+        <th>Total Salary</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody id="tableBody"></tbody>
+  </table>
+</div>
+
+<script src="script.js"></script>
+ 
+
+
 </body>
 </html>
