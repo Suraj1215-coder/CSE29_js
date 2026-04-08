@@ -4,21 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body onload="myFunction()">
-    
-    <script src="second2.js">
-
-        var text = '{"employees":['+
-        '{"firstName":"John","lastName":"Doe"},'+
-        '{"firstName":"Anna","lastName":"Smith"},'+
-        '{"firstName":"Peter","lastName":"Jones"}]}';
-
-        obj = JSON.parse(text);
-        document.getElementById("demo").innerHTML=text
-        obj.employees[1].first
-    
-
-    </script>
+<body>
+    <div class="container">
+        <h1><u>Salary Management System</u></h1>
+        <input type="text" id="name" placeholder="Enter the name">
+        <input type="text" id="id" placeholder="Enter the id">
+        <input type="number" id="salary" placeholder="Enter the salary">
+        <input type="text" id="dept" placeholder="Enter the department">
+        <button class="btn1">salary</button>
+        
+        <button class="btn1">add emp </button>
+        <button class="btn1">salary>5000</button>
+        <button class="btn1">all emp</button>
+        <button class="btn1">count</button>
+        <!-- <button id="btn1"></button> -->
+         
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>

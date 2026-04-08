@@ -1,59 +1,25 @@
-// var num =10;
+function countValues(str) {
+    let count = 0;
+    for(const char of str){
+        // console.log(char);
+        if(char ==='a' || char ==='e' || char ==='i' || char === 'o' || char ==='u'){
+            count++;
+        }
+    }
+    console.log(count);
+}
 
-// console.log(num);
+let arr = ["pune","mumbai"];
+arr.forEach(function printVal(val){
+    console.log(val.toUpperCase());
+})
 
-// console.log(typeof(num));
-
-// num = false;
-
-// console.log(num);
-
-// console.log(typeof(num));
-
-// num = null;
-
-
-// const sym1 = Symbol(5);
-
-// console.log(sym1);
-
-// const sym2 = Symbol(5);
-// console.log(sym2);
-
-// if(sym1 == sym2){
-//     console.log("true");
-// }
-// else{
-//     console.log("false")
-// }
+Higher Order Function/MethodsA
 
 
-var =10;
-var = 20;
-var linebreak = "<br/>";
-
-document.write("(a==b)=>");
-
-result =(a==b);
-
-document.write(result);
-
-document.write(linebreak);
-
-document.write("(a<b)=>");
-
-result = (a<b);
-document.write(result);
-document.write(linebreak);
-
-document.write("(a>b)=>");
-
-result = (a>b);
-
-document.write(result);
-document.write(linebreak);
-
-
-
+let arr = [1,4,6,8,23];
+    arr.forEach(function printi(i){
+        console.log([i]*[i]);
+    })
 
 
