@@ -1,39 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Employee Salary Management System</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IncomeCalculationt</title>
 </head>
-<body>
+<body style="background-color: black; color: white; display: flex; align-items: center; justify-content: center; height: 100vh;">
 
-<h1>Employee Salary Management System</h1>
+    <div id="parent">
+        <h1>Income Tex Calculator</h1>
+        <form>
+            <label for="income"></label>
+            <input type="number" id="Income" name="income">
 
-<div class="container">
-  <input type="text" id="name" placeholder="Name">
-  <input type="number" id="basic" placeholder="Basic Salary">
-  <input type="number" id="hra" placeholder="HRA">
-  <input type="number" id="da" placeholder="DA">
-  <button onclick="addEmployee()">Add</button>
+            <br><br>
 
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Basic</th>
-        <th>HRA</th>
-        <th>DA</th>
-        <th>Total Salary</th>
-        <th>Action</th>
-      </tr>
-    </thead>
-    <tbody id="tableBody"></tbody>
-  </table>
-</div>
-
-<script src="script.js"></script>
- 
-
-
+            <button type="submit">Calculate income</button>
+        </form>
+        <h2>Total Tex:</h2>
+    </div>
+    
+    <script src="script.js"></script>
 </body>
 </html>

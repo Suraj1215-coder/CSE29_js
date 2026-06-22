@@ -1,33 +1,30 @@
- function addEmployee() {
-    let name = document.getElementById("name").value;
-    let basic = parseFloat(document.getElementById("basic").value);
-    let hra = parseFloat(document.getElementById("hra").value);
-    let da = parseFloat(document.getElementById("da").value);
+const form = document.querySelector("form");
 
-    if (name === "" || isNaN(basic) || isNaN(hra) || isNaN(da)) {
-      alert("Please fill all fields correctly");
-      return;
+form.addEventListener('submit', (e)=>{
+    e.preventDefault()
+
+    const income = document.querySelector("#income");
+    const amount = parseInt(income.value);
+
+    const result = document.querySelector('h2');
+    let totalTex = 0;
+    if(amount<=1200000)
+        totalTex = 0;
+    else if(amount<=160000){
+        totalTex = (amount-1200000)*0.15;
+    }
+    else if(amount<=2000000){
+        totalTex = (amount-1600000)*0.20 + 60000;
+    }
+    else if(amount<=2400000){
+        totalTex = (amount-2000000)*0.25 + 60000 + 80000;
+    }
+    else{
+        totalTex = (amount-2400000)*0.30 + 60000 + 80000 + 100000;
     }
 
-    let total = basic + hra + da;
+    result.textContent = `Total Tex: ${totalTex}`;
+    form.reset();
 
-    let row = `<tr>
-      <td>${name}</td>
-      <td>${basic}</td>
-      <td>${hra}</td>
-      <td>${da}</td>
-      <td>${total}</td>
-      <td><button class="delete-btn" onclick="deleteRow(this)">Delete</button></td>
-    </tr>`;
 
-    document.getElementById("tableBody").innerHTML += row;
-
-    document.getElementById("name").value = "";
-    document.getElementById("basic").value = "";
-    document.getElementById("hra").value = "";
-    document.getElementById("da").value = "";
-  }
-
-  function deleteRow(btn) {
-    btn.parentElement.parentElement.remove();
-  }
+})
