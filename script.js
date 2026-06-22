@@ -1,30 +1,28 @@
-const form = document.querySelector("form");
+let input = document.getElementById('inputBox');
+let buttons = document.querySelectorAll('button');
 
-form.addEventListener('submit', (e)=>{
-    e.preventDefault()
+let string = "";
+let arr= Array.from(buttons);
+arr.forEach(button => {
+    button.addEventListener('click' , (e) => {
+        if(e.target.innerHTML == '='){
+            string = eval(string);
+            input.value = string;
 
-    const income = document.querySelector("#income");
-    const amount = parseInt(income.value);
+        }
 
-    const result = document.querySelector('h2');
-    let totalTex = 0;
-    if(amount<=1200000)
-        totalTex = 0;
-    else if(amount<=160000){
-        totalTex = (amount-1200000)*0.15;
-    }
-    else if(amount<=2000000){
-        totalTex = (amount-1600000)*0.20 + 60000;
-    }
-    else if(amount<=2400000){
-        totalTex = (amount-2000000)*0.25 + 60000 + 80000;
-    }
-    else{
-        totalTex = (amount-2400000)*0.30 + 60000 + 80000 + 100000;
-    }
-
-    result.textContent = `Total Tex: ${totalTex}`;
-    form.reset();
-
-
+        else if(e.target.innerHTML == 'AC'){
+            string = "";
+            input.value = string;
+        }
+        else if(e.target.innerHTML == 'DEL'){
+            string = string.substring(0 , string.length-1);
+            input.value = string;
+        }
+        
+        else{
+             string += e.target.innerHTML;
+        input.value = string;
+        }
+    })
 })
